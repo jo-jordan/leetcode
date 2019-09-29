@@ -27,6 +27,7 @@ public class Solution2 {
     public static void main(String[] args) {
         Solution2 solution2 = new Solution2();
 
+
         ListNode node = new ListNode(1);
         node.next = new ListNode(2);
         node.next.next = new ListNode(3);
