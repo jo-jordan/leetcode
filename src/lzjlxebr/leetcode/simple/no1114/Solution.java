@@ -18,11 +18,10 @@ public class Solution {
     }
 
     public void first(Runnable printFirst) throws InterruptedException {
-        while (count.get() != 0) {}
 
         // printFirst.run() outputs "first". Do not change or remove this line.
         printFirst.run();
-        count.set(1);
+        count.incrementAndGet();
     }
 
     public void second(Runnable printSecond) throws InterruptedException {
@@ -30,7 +29,7 @@ public class Solution {
 
         // printSecond.run() outputs "second". Do not change or remove this line.
         printSecond.run();
-        count.set(2);
+        count.incrementAndGet();
     }
 
     public void third(Runnable printThird) throws InterruptedException {
@@ -38,14 +37,14 @@ public class Solution {
 
         // printThird.run() outputs "third". Do not change or remove this line.
         printThird.run();
-        count.set(0);
+//        count.set(0);
     }
 
 
 
     public static void main(String[] args) throws InterruptedException {
 
-        hereWeGo(new int[]{2, 3, 1});
+        hereWeGo(new int[]{1, 3, 2});
     }
 
     public static void hereWeGo(int[] order) {
